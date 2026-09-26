@@ -140,7 +140,7 @@
   font-weight: 800;
 }
 
-/* Simple Form Styles (from screenshot) */
+/* Simple Form Styles */
 .simple-form-label {
   font-size: 1.1rem;
   color: #333;
@@ -514,6 +514,237 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* ── Journey Page Styles ── */
+.journey-intro-card {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  text-align: center;
+  padding: 2.5rem;
+  background: var(--color-cream);
+  border-radius: 24px;
+  border: 1px solid var(--color-border);
+}
+
+.journey-intro-heading {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.journey-intro-p {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.journey-timeline-track {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto 5rem;
+  padding: 2rem 0;
+}
+
+.timeline-line-glow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 28px;
+  width: 4px;
+  background: linear-gradient(180deg, var(--color-pink), var(--color-blue), var(--color-teal));
+  border-radius: 4px;
+}
+
+.journey-timeline-item {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: flex-start;
+}
+
+.timeline-badge-node {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  z-index: 2;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.timeline-card-box {
+  flex-grow: 1;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1.5px solid var(--color-border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.timeline-step-tag {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.timeline-step-title {
+  font-size: 1.4rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.timeline-step-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Craft Pillars */
+.craft-pillars-section {
+  margin-top: 5rem;
+  padding-top: 4rem;
+  border-top: 1px dashed var(--color-border);
+}
+
+.pillars-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pillars-eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: var(--color-pink);
+  font-weight: 800;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.pillars-title {
+  font-size: 2.2rem;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.pillar-card {
+  background: var(--color-cream);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.pillar-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.pillar-card-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.pillar-card-desc {
+  font-size: 0.88rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Contact Page Styles ── */
+.contact-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-info-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-cream);
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+}
+
+.contact-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bg-pink-tint { background: #FCEBF0; }
+.bg-blue-tint { background: #EBF4FC; }
+.bg-cream-tint { background: #F7F3E9; }
+
+.faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.faq-question-btn {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1.05rem;
+  color: #111;
+}
+
+.faq-arrow {
+  transition: transform 0.3s ease;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.faq-answer-box {
+  padding: 0 1.5rem 1.25rem;
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.form-heading-title {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Responsive Modal & Subpage Overrides */
 @media (max-width: 768px) {
   .flavor-modal-card {
     grid-template-columns: 1fr;
@@ -526,5 +757,16 @@
   }
   .flavor-modal-right {
     padding: 2rem 1.5rem;
+  }
+  .timeline-line-glow {
+    left: 20px;
+  }
+  .timeline-badge-node {
+    width: 44px;
+    height: 44px;
+    font-size: 0.95rem;
+  }
+  .journey-timeline-item {
+    gap: 1rem;
   }
 }
