@@ -219,13 +219,17 @@
   }
 }
 
-/* ── Organic Flavor Pod for Page Grid ── */
+/* ── Organic Flavor Pod for Page Grid (Clean, Non-Card Layout) ── */
 .flavor-pod-page {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 3rem 1.5rem 1.5rem;
-  margin-top: 3.5rem; /* Space for floating slanting stick */
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 1.5rem 2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  min-height: 420px;
 }
 
 .flavor-pod-page-bg {
@@ -233,29 +237,29 @@
   inset: 0;
   z-index: 1;
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-radius 0.5s ease;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-radius 0.5s ease, box-shadow 0.4s ease;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
 }
 
-/* Inner ambient flavor background image inside organic shape */
 .flavor-pod-page-bg-img {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0.32;
+  opacity: 0.35;
   mix-blend-mode: multiply;
   transition: transform 0.6s ease, opacity 0.4s ease;
 }
 
 .flavor-pod-page:hover .flavor-pod-page-bg {
-  transform: scale(1.05) rotate(-3deg);
-  border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  transform: scale(1.04) rotate(-2deg);
+  border-radius: 48% 52% 55% 45% / 45% 48% 52% 50%;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
 }
 
 .flavor-pod-page:hover .flavor-pod-page-bg-img {
-  opacity: 0.45;
+  opacity: 0.5;
   transform: scale(1.08);
 }
 
@@ -264,83 +268,253 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   height: 100%;
 }
 
 .flavor-top {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: -1.5rem; /* Pull visual stick up */
-  z-index: 3;
-}
-
-.flavor-id {
-  font-size: 1.5rem;
-  font-weight: bold;
+  justify-content: flex-end;
+  padding: 0 0.5rem;
 }
 
 .flavor-kanji {
-  font-size: 2.5rem;
-  opacity: 0.18;
+  font-size: 3.5rem;
+  opacity: 0.22;
   font-weight: 900;
+  line-height: 1;
 }
 
+/* BIG product stick centerpiece */
 .flavor-visual-page {
   text-align: center;
-  margin: -3.5rem 0 1.5rem;
+  margin: -1.5rem 0 1.5rem;
   z-index: 3;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 180px;
+  width: 100%;
+  height: 230px;
 }
 
 .flavor-pod-page-img {
   width: 100%;
-  max-width: 220px;
-  max-height: 180px;
+  max-width: 270px;
+  max-height: 220px;
   object-fit: contain;
-  transform: rotate(-20deg) translateY(-6px);
-  filter: drop-shadow(0 18px 25px rgba(0, 0, 0, 0.22));
+  transform: rotate(-22deg) translateY(-8px);
+  filter: drop-shadow(0 22px 30px rgba(0, 0, 0, 0.26));
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.4s ease;
 }
 
 .flavor-pod-page:hover .flavor-pod-page-img {
-  transform: rotate(-12deg) translateY(-20deg) scale(1.12);
-  filter: drop-shadow(0 28px 38px rgba(0, 0, 0, 0.32));
+  transform: rotate(-14deg) translateY(-22deg) scale(1.15);
+  filter: drop-shadow(0 32px 42px rgba(0, 0, 0, 0.38));
 }
 
-.flavor-pod-page-bottom {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  padding: 1.5rem;
-  border-radius: 20px;
-  flex-grow: 1;
+/* Pod Bottom Text & Pill Button (No heavy card box) */
+.flavor-pod-page-info {
+  text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.75rem;
+  z-index: 3;
+  padding-bottom: 0.5rem;
 }
 
-.flavor-name {
-  font-size: 1.5rem;
+.flavor-pod-page-title {
+  font-size: 1.75rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.flavor-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid currentColor;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.flavor-pod-page:hover .flavor-view-btn {
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Flavor Details Modal ── */
+.flavor-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.flavor-modal-card {
+  position: relative;
+  width: 100%;
+  max-width: 820px;
+  background: #ffffff;
+  border-radius: 28px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+.flavor-modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.08);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  color: #333333;
+}
+
+.flavor-modal-close:hover {
+  background: rgba(0, 0, 0, 0.16);
+  transform: scale(1.1);
+}
+
+.flavor-modal-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  overflow: hidden;
+  min-height: 380px;
+}
+
+.flavor-modal-bg-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+}
+
+.flavor-modal-img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 280px;
+  max-height: 300px;
+  object-fit: contain;
+  transform: rotate(-18deg);
+  filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.3));
+}
+
+.flavor-modal-right {
+  padding: 3.5rem 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+  position: relative;
+}
+
+.flavor-modal-kanji {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 4rem;
+  font-weight: 900;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.flavor-modal-title {
+  font-size: 2.2rem;
+  margin: 0;
   line-height: 1.1;
+}
+
+.flavor-modal-desc {
+  font-size: 0.95rem;
+  color: #444444;
+  line-height: 1.6;
   margin: 0;
 }
 
-.flavor-desc {
+.flavor-modal-ingredients h4 {
   font-size: 0.85rem;
-  color: #444;
-  line-height: 1.5;
-  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888888;
+  margin: 0 0 0.3rem;
 }
 
-.flavor-ingredients {
-  font-size: 0.75rem;
-  color: #666;
-  border-top: 1px dashed rgba(0,0,0,0.1);
-  padding-top: 0.75rem;
-  margin-top: auto;
-  margin-bottom: 0.5rem;
+.flavor-modal-ingredients p {
+  font-size: 0.9rem;
+  color: #222222;
+  margin: 0;
+  font-weight: 600;
+}
+
+.flavor-modal-order-btn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1.1rem;
+  border-radius: 9999px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.flavor-modal-order-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .flavor-modal-card {
+    grid-template-columns: 1fr;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .flavor-modal-left {
+    min-height: 240px;
+    padding: 2rem;
+  }
+  .flavor-modal-right {
+    padding: 2rem 1.5rem;
+  }
 }
