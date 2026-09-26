@@ -4,14 +4,11 @@ import { motion } from 'framer-motion';
 import './OurFlavors.css';
 
 const FLAVORS = [
-  { id: '01', name: 'BLACK SESAME', kanji: '黒ごま', bg: '#F2E8DC', accent: '#222222', img: '/flavours/flavour-1.png', bgImage: '/images/flavors/bg_chocolate.png' },
+  { id: '01', name: 'VANILLA',      kanji: 'バニラ', bg: '#F9F5EC', accent: '#C8A066', img: '/images/flavors/vanila(og one).png', bgImage: '/images/flavors/bg_vanilla_custom.png' },
   { id: '02', name: 'CACAO',        kanji: 'カカオ', bg: '#EAD1C2', accent: '#5E3A26', img: '/images/flavors/chocolate.png', bgImage: '/images/flavors/bg_chocolate_custom.png' },
-  { id: '03', name: 'MATCHA',       kanji: '抹茶',   bg: '#EAF7F5', accent: '#2E7D32', img: '/images/flavors/matcha.png', bgImage: '/images/flavors/bg_matcha_custom.png' },
-  { id: '04', name: 'VANILLA',      kanji: 'バニラ', bg: '#F9F5EC', accent: '#C8A066', img: '/images/flavors/vanila(og one).png', bgImage: '/images/flavors/bg_vanilla_custom.png' },
-  { id: '05', name: 'COCONUT',      kanji: 'ココナッツ', bg: '#F4EEDB', accent: '#6E7051', img: '/images/flavors/latte.png', bgImage: '/images/flavors/bg_latte_custom.png' },
-  { id: '06', name: 'BLUEBERRY',    kanji: 'ブルーベリー', bg: '#E6E4EE', accent: '#363E78', img: '/flavours/flavour-6.png', bgImage: '/images/flavors/bg_strawberry_custom.png' },
-  { id: '07', name: 'RASPBERRY',    kanji: 'ラズベリー', bg: '#F7DFE4', accent: '#B42548', img: '/images/flavors/strawberry.png', bgImage: '/images/flavors/bg_strawberry_custom.png' },
-  { id: '08', name: 'STRAWBERRY',   kanji: '苺',     bg: '#FCEBF0', accent: '#E43D5B', img: '/images/flavors/strawberry.png', bgImage: '/images/flavors/bg_strawberry_custom.png' },
+  { id: '03', name: 'ROASTED LATTE', kanji: 'ラテ',   bg: '#F4EEDB', accent: '#8B5A2B', img: '/images/flavors/latte.png', bgImage: '/images/flavors/bg_latte_custom.png' },
+  { id: '04', name: 'MATCHA',       kanji: '抹茶',   bg: '#EAF7F5', accent: '#2E7D32', img: '/images/flavors/matcha.png', bgImage: '/images/flavors/bg_matcha_custom.png' },
+  { id: '05', name: 'STRAWBERRY',   kanji: '苺',     bg: '#FCEBF0', accent: '#E43D5B', img: '/images/flavors/strawberry.png', bgImage: '/images/flavors/bg_strawberry_custom.png' },
 ];
 
 export function OurFlavors() {

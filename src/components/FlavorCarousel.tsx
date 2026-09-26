@@ -39,6 +39,17 @@ const FLAVORS: FlavorItem[] = [
     badgeColor: '#E25B45',
   },
   {
+    id: 'latte',
+    name: 'Roasted Latte',
+    tagline: 'Aromatic & Bold',
+    desc: 'Freshly roasted espresso notes blended into silky cream for coffee lovers.',
+    image: '/images/flavors/latte.png',
+    bgImage: '/images/flavors/bg_latte_custom.png',
+    textColor: '#111111',
+    accentColor: '#C87B48',
+    badgeColor: '#C87B48',
+  },
+  {
     id: 'matcha',
     name: 'Uji Matcha',
     tagline: 'Earthy & Smooth',
@@ -59,17 +70,6 @@ const FLAVORS: FlavorItem[] = [
     textColor: '#111111',
     accentColor: '#FF3366',
     badgeColor: '#FF3366',
-  },
-  {
-    id: 'latte',
-    name: 'Roasted Latte',
-    tagline: 'Aromatic & Bold',
-    desc: 'Freshly roasted espresso notes blended into silky cream for coffee lovers.',
-    image: '/images/flavors/latte.png',
-    bgImage: '/images/flavors/bg_latte_custom.png',
-    textColor: '#111111',
-    accentColor: '#C87B48',
-    badgeColor: '#C87B48',
   },
 ];
 

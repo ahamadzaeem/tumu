@@ -6,15 +6,15 @@ import '../components/OurFlavors.css';
 const ALL_FLAVORS = [
   { 
     id: '01', 
-    name: 'BLACK SESAME', 
-    kanji: '黒ごま', 
-    bg: '#F2E8DC', 
-    accent: '#222222', 
-    emoji: '🖤', 
-    img: '/flavours/flavour-1.png',
-    bgImage: '/images/flavors/bg_chocolate.png',
-    desc: 'Deep, nutty, and savory-sweet black sesame cream wrapped in a satisfyingly crisp shell.',
-    ingredients: 'Roasted Black Sesame, Dairy Cream, Crisp Pastry Shell.'
+    name: 'VANILLA', 
+    kanji: 'バニラ', 
+    bg: '#F9F5EC', 
+    accent: '#C8A066', 
+    emoji: '🤍', 
+    img: '/images/flavors/vanila(og one).png',
+    bgImage: '/images/flavors/bg_vanilla_custom.png',
+    desc: 'Infused with premium Madagascar bourbon vanilla beans, offering a timelessly aromatic and comforting experience.',
+    ingredients: 'Madagascar Vanilla Pods, Pure Cream, Traditional Crust.'
   },
   { 
     id: '02', 
@@ -30,6 +30,18 @@ const ALL_FLAVORS = [
   },
   { 
     id: '03', 
+    name: 'ROASTED LATTE', 
+    kanji: 'ラテ', 
+    bg: '#F4EEDB', 
+    accent: '#8B5A2B', 
+    emoji: '☕', 
+    img: '/images/flavors/latte.png',
+    bgImage: '/images/flavors/bg_latte_custom.png',
+    desc: 'Freshly roasted espresso notes blended into silky cream for coffee lovers.',
+    ingredients: 'Roasted Espresso, Pure Milk Cream, Golden Crust.'
+  },
+  { 
+    id: '04', 
     name: 'MATCHA', 
     kanji: '抹茶', 
     bg: '#EAF7F5', 
@@ -41,55 +53,7 @@ const ALL_FLAVORS = [
     ingredients: 'Ceremonial Uji Matcha, Pure Milk Cream, Crisp Rice Shell.'
   },
   { 
-    id: '04', 
-    name: 'VANILLA', 
-    kanji: 'バニラ', 
-    bg: '#F9F5EC', 
-    accent: '#C8A066', 
-    emoji: '🤍', 
-    img: '/images/flavors/vanila(og one).png',
-    bgImage: '/images/flavors/bg_vanilla_custom.png',
-    desc: 'Infused with premium Madagascar bourbon vanilla beans, offering a timelessly aromatic and comforting experience.',
-    ingredients: 'Madagascar Vanilla Pods, Pure Cream, Traditional Crust.'
-  },
-  { 
     id: '05', 
-    name: 'COCONUT', 
-    kanji: 'ココナッツ', 
-    bg: '#F4EEDB', 
-    accent: '#6E7051', 
-    emoji: '🥥', 
-    img: '/images/flavors/latte.png',
-    bgImage: '/images/flavors/bg_latte_custom.png',
-    desc: 'Tropical, naturally sweet coconut cream with a light and refreshing nutty finish.',
-    ingredients: 'Fresh Coconut Cream, Milk, Toasted Pastry Shell.'
-  },
-  { 
-    id: '06', 
-    name: 'BLUEBERRY', 
-    kanji: 'ブルーベリー', 
-    bg: '#E6E4EE', 
-    accent: '#363E78', 
-    emoji: '🫐', 
-    img: '/flavours/flavour-6.png',
-    bgImage: '/images/flavors/bg_strawberry_custom.png',
-    desc: 'A fruity and vibrant cream infused with real blueberries, balancing tartness and creamy sweetness.',
-    ingredients: 'Wild Blueberries, Sweet Cream, Golden Shell.'
-  },
-  { 
-    id: '07', 
-    name: 'RASPBERRY', 
-    kanji: 'ラズベリー', 
-    bg: '#F7DFE4', 
-    accent: '#B42548', 
-    emoji: '🍓', 
-    img: '/images/flavors/strawberry.png',
-    bgImage: '/images/flavors/bg_strawberry_custom.png',
-    desc: 'Bold, tangy raspberry puree swirled into our signature smooth cream core.',
-    ingredients: 'Raspberry Puree, Dairy Cream, Baked Shell.'
-  },
-  { 
-    id: '08', 
     name: 'STRAWBERRY', 
     kanji: '苺', 
     bg: '#FCEBF0', 
