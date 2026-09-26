@@ -7,6 +7,7 @@ import '../components/OurFlavors.css';
 export interface FlavorData {
   id: string;
   name: string;
+  tagline: string;
   kanji: string;
   bg: string;
   accent: string;
@@ -20,6 +21,7 @@ const ALL_FLAVORS: FlavorData[] = [
   { 
     id: 'vanilla', 
     name: 'VANILLA', 
+    tagline: 'Madagascar Bourbon Vanilla & Pure Cream',
     kanji: 'バニラ', 
     bg: '#F9F5EC', 
     accent: '#C8A066', 
@@ -31,6 +33,7 @@ const ALL_FLAVORS: FlavorData[] = [
   { 
     id: 'cacao', 
     name: 'CACAO', 
+    tagline: 'Dark Belgian Cocoa & Baked Crisp Shell',
     kanji: 'カカオ', 
     bg: '#EAD1C2', 
     accent: '#5E3A26', 
@@ -42,6 +45,7 @@ const ALL_FLAVORS: FlavorData[] = [
   { 
     id: 'latte', 
     name: 'ROASTED LATTE', 
+    tagline: 'Fresh Roasted Espresso & Silky Velvet Core',
     kanji: 'ラテ', 
     bg: '#F4EEDB', 
     accent: '#8B5A2B', 
@@ -53,6 +57,7 @@ const ALL_FLAVORS: FlavorData[] = [
   { 
     id: 'matcha', 
     name: 'MATCHA', 
+    tagline: 'Authentic Ceremonial Uji Green Tea',
     kanji: '抹茶', 
     bg: '#EAF7F5', 
     accent: '#2E7D32', 
@@ -64,6 +69,7 @@ const ALL_FLAVORS: FlavorData[] = [
   { 
     id: 'strawberry', 
     name: 'STRAWBERRY', 
+    tagline: 'Real Tochigi Strawberry Puree & Sweet Shell',
     kanji: '苺', 
     bg: '#FCEBF0', 
     accent: '#E43D5B', 
@@ -138,11 +144,14 @@ export function FlavorsPage() {
                   />
                 </div>
 
-                {/* Clean Pod Info & Action Button (No heavy card box) */}
+                {/* Clean Pod Info & Action Button */}
                 <div className="flavor-pod-page-info">
                   <h3 className="flavor-pod-page-title font-heading" style={{ color: flavor.accent }}>
                     {flavor.name}
                   </h3>
+                  <p className="flavor-pod-page-subtitle font-body">
+                    {flavor.tagline}
+                  </p>
                   <button className="flavor-view-btn" style={{ color: flavor.accent }}>
                     EXPLORE FLAVOUR <ArrowRight size={14} />
                   </button>
