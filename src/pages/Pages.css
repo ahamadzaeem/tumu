@@ -1,0 +1,322 @@
+/* ── Page Layouts & Elements ── */
+
+.page-container {
+  padding-top: 7rem; /* Space for fixed capsule navbar */
+  min-height: 100vh;
+  background-color: var(--color-white);
+  box-sizing: border-box;
+}
+
+/* Page Header Banner */
+.page-banner {
+  padding: 6rem 0 4rem;
+  text-align: center;
+  background-color: var(--color-cream);
+  background-image: url('/japananese paper.png');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Drifting sakura petals background for pages */
+.page-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/petals sakura bg less.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.page-banner-eyebrow {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--color-pink);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.page-banner-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  color: var(--color-black);
+  margin: 0;
+}
+
+/* Back Link Button */
+.back-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-blue);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease;
+}
+
+.back-link-btn:hover {
+  transform: translateX(-4px);
+}
+
+/* Page Content Body */
+.page-content {
+  padding: 5rem 0;
+}
+
+/* Grid configurations */
+.page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+/* Form Styles */
+.page-form-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--color-white);
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-black);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-input, .form-textarea, .form-select {
+  width: 100%;
+  padding: 0.95rem 1.25rem;
+  border-radius: 12px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-cream);
+  outline: none;
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.form-input:focus, .form-textarea:focus, .form-select:focus {
+  border-color: var(--color-blue);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-submit-btn {
+  width: 100%;
+  padding: 1.1rem;
+  font-size: 1rem;
+  justify-content: center;
+  border-radius: 9999px;
+  font-weight: 800;
+}
+
+/* Simple Form Styles (from screenshot) */
+.simple-form-label {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.2rem;
+  font-weight: 400;
+}
+
+.simple-form-input {
+  width: 100%;
+  padding: 0.8rem 1.25rem;
+  border-radius: 9999px;
+  border: 1px solid #ddd;
+  background: #fff;
+  outline: none;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.simple-form-textarea {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  outline: none;
+  font-size: 1rem;
+  font-family: inherit;
+  min-height: 120px;
+  resize: vertical;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.simple-form-input:focus, .simple-form-textarea:focus {
+  border-color: var(--color-blue);
+}
+
+/* Responsive Grid Split Layouts */
+.grid-two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (min-width: 969px) {
+  .grid-find {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+  }
+  .grid-franchise {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 4rem;
+  }
+  .grid-contact {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding-top: 5.5rem;
+  }
+  .page-banner {
+    padding: 4rem 0 3rem;
+  }
+  .page-content {
+    padding: 3rem 0;
+  }
+  .page-form-card {
+    padding: 1.75rem;
+    border-radius: 16px;
+  }
+}
+
+/* ── Organic Flavor Pod for Page Grid ── */
+.flavor-pod-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1.5rem 1.5rem;
+  margin-top: 3rem; /* Space for the floating image */
+}
+
+.flavor-pod-page-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  transition: transform 0.4s ease, border-radius 0.4s ease;
+}
+
+.flavor-pod-page:hover .flavor-pod-page-bg {
+  transform: scale(1.05) rotate(-3deg);
+  border-radius: 50%;
+}
+
+.flavor-pod-page-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.flavor-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -2rem; /* Pull image up */
+  z-index: 3;
+}
+
+.flavor-id {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.flavor-kanji {
+  font-size: 2.5rem;
+  opacity: 0.15;
+  font-weight: 900;
+}
+
+.flavor-visual-page {
+  text-align: center;
+  margin: -4rem 0 1rem;
+  z-index: 2;
+  position: relative;
+}
+
+.flavor-pod-page-img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 16px;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.flavor-pod-page:hover .flavor-pod-page-img {
+  transform: translateY(-15px) scale(1.08);
+}
+
+.flavor-pod-page-bottom {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.flavor-name {
+  font-size: 1.5rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.flavor-desc {
+  font-size: 0.85rem;
+  color: #444;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.flavor-ingredients {
+  font-size: 0.75rem;
+  color: #666;
+  border-top: 1px dashed rgba(0,0,0,0.1);
+  padding-top: 0.75rem;
+  margin-top: auto;
+  margin-bottom: 0.5rem;
+}

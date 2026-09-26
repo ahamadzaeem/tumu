@@ -1,0 +1,54 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Large design assets & brand files (not needed in repo)
+*.pdf
+*.mp4
+*.zip
+*.otf
+*.ttf
+ChatGPT\ Image*.png
+Screenshot*.png
+scratch_crop_*.png
+background.png
+filling.png
+process.png
+"bg design.png"
+"bg2 design.png"
+"japananese paper.png"
+"logo background for design.png"
+"logo.png"
+"new design.png"
+"new scroll video.mp4"
+"mobile video.mp4"
+"wavel design.png"
+"petals sakura bg less.png"
+"stripe lines.png"
+"making design template.png"
+# Heavy assets
+public/frames/
+public/flavours/
+public/images/
+public/fonts/

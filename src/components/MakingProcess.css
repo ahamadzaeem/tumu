@@ -1,0 +1,268 @@
+/* ── Section Container ── */
+.making-craft-section {
+  position: relative;
+  width: 100%;
+  background-color: #FAF6F0;
+  overflow: hidden;
+}
+
+.making-craft-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  line-height: 0;
+}
+
+/* ── Top Partition Blend Overlay ── */
+.making-craft-top-blend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background: linear-gradient(
+    to bottom,
+    #FAF6F0 0%,
+    rgba(250, 246, 240, 0.8) 45%,
+    rgba(250, 246, 240, 0) 100%
+  );
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ── High Resolution Base Background Image ── */
+.making-craft-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Overlay Content Layer ── */
+.making-craft-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  line-height: normal;
+  background: linear-gradient(
+    to right,
+    rgba(250, 246, 240, 0.98) 0%,
+    rgba(250, 246, 240, 0.85) 35%,
+    rgba(250, 246, 240, 0) 50%
+  );
+}
+
+.making-craft-left-content {
+  pointer-events: auto;
+  padding-left: 5.5%;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ── Eyebrow Tag ── */
+.craft-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.craft-num {
+  font-family: var(--font-fancy);
+  font-size: clamp(0.9rem, 1.1vw, 1.25rem);
+  font-weight: 700;
+  color: #1b75bc;
+}
+
+.craft-line {
+  width: clamp(25px, 3.5vw, 45px);
+  height: 1.5px;
+  background-color: #1b75bc;
+}
+
+.craft-eyebrow-text {
+  font-family: var(--font-fancy);
+  font-size: clamp(0.75rem, 0.9vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #1b75bc;
+  text-transform: uppercase;
+}
+
+/* ── Main Headline ── */
+.craft-headline {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 4.3vw, 4.8rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.2rem 0;
+}
+
+.craft-text-blue {
+  color: #1b75bc;
+}
+
+.craft-text-red {
+  color: #e52347;
+}
+
+/* ── Description ── */
+.craft-desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.82rem, 1.05vw, 1.15rem);
+  line-height: 1.55;
+  color: #4a4a4a;
+  margin: 0 0 1.8rem 0;
+  max-width: clamp(280px, 32vw, 460px);
+}
+
+
+/* ── CTA Button ── */
+.craft-action {
+  margin-bottom: 2.2rem;
+}
+
+.craft-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: clamp(0.65rem, 0.95vw, 0.95rem) clamp(1.4rem, 1.8vw, 2.2rem);
+  background: #1b75bc;
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(0.72rem, 0.85vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 10px 22px rgba(27, 117, 188, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.craft-btn:hover {
+  background: #155d96;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(27, 117, 188, 0.45);
+}
+
+.craft-arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.craft-btn:hover .craft-arrow-icon {
+  transform: translateX(4px);
+}
+
+/* ── Bottom Accent Label ── */
+.craft-bottom-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.craft-tag-line {
+  width: clamp(20px, 3vw, 40px);
+  height: 1.5px;
+  background-color: #1b75bc;
+}
+
+.craft-tag-text {
+  font-size: clamp(0.65rem, 0.75vw, 0.88rem);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #1b75bc;
+  text-transform: uppercase;
+}
+
+/* ── Responsive Styling ── */
+@media (max-width: 768px) {
+  .making-craft-container {
+    position: relative;
+    width: 100%;
+    min-height: 520px;
+    max-height: 640px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .making-craft-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 85% center;
+    transform: scale(1.4);
+    transform-origin: center right;
+    display: block;
+    z-index: 0;
+  }
+
+  .making-craft-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    padding: 2.5rem 1.25rem;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+      to right,
+      rgba(250, 246, 240, 0.98) 0%,
+      rgba(250, 246, 240, 0.88) 35%,
+      rgba(250, 246, 240, 0.4) 45%,
+      rgba(250, 246, 240, 0) 50%
+    );
+  }
+
+  .making-craft-left-content {
+    width: 88%;
+    max-width: 440px;
+    padding-left: 0.5rem;
+    text-align: left;
+    align-items: flex-start;
+    pointer-events: auto;
+  }
+
+  .craft-eyebrow {
+    justify-content: flex-start;
+    margin-bottom: 0.8rem;
+  }
+
+  .craft-headline {
+    font-size: clamp(2.1rem, 7.5vw, 3rem);
+    margin-bottom: 0.8rem;
+    line-height: 1.1;
+    filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.95));
+  }
+
+  .craft-desc {
+    max-width: 100%;
+    text-align: left;
+    margin-bottom: 1.4rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #3A2312;
+    text-shadow: 0 1px 6px rgba(255, 255, 255, 0.95);
+  }
+
+  .craft-action {
+    margin-bottom: 1.2rem;
+  }
+
+  .craft-bottom-tag {
+    justify-content: flex-start;
+  }
+}

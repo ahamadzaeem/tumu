@@ -1,0 +1,227 @@
+/* ── Find Your TUMU — Banner with background image ── */
+.find-section {
+  background-color: #F5EFE6;
+  background-image: url('/images/available-section.png');
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+}
+
+.find-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 0 5%;
+}
+
+/* Left Content Column */
+.find-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.find-eyebrow {
+  font-family: var(--font-fancy);
+  font-size: 0.85rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #6D5647;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.find-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  line-height: 1;
+  color: var(--color-pink);
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.5px;
+  font-weight: 900;
+}
+
+.find-desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.82rem, 1.1vw, 1rem);
+  line-height: 1.5;
+  color: #5C4A3E;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+
+
+/* Search Box */
+.find-search-box {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.find-search-input {
+  width: 100%;
+  padding: 0.85rem 3.5rem 0.85rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #FFFFFF;
+  font-size: 0.9rem;
+  color: #3A2312;
+  outline: none;
+  box-shadow: 0 4px 14px rgba(60, 40, 20, 0.06);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.find-search-input:focus {
+  border-color: var(--color-pink);
+  box-shadow: 0 4px 14px rgba(228, 61, 91, 0.14);
+}
+
+.find-search-btn {
+  position: absolute;
+  right: 5px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--color-pink);
+  color: #FFFFFF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.find-search-btn:hover {
+  background-color: var(--color-pink-dark);
+  transform: scale(1.05);
+}
+
+/* City Links Row */
+.find-cities-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.find-city-link {
+  background: none;
+  border: none;
+  font-size: 0.88rem;
+  color: #6D5647;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0 0 0.2rem 0;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.find-city-link.is-active,
+.find-city-link:hover {
+  color: var(--color-pink);
+}
+
+.find-city-link.is-active::after,
+.find-city-link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-pink);
+  border-radius: 2px;
+}
+
+/* Right Visual — Map */
+.find-visual {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.find-map-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+}
+
+.find-map-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  /* Invert the dark navy map to cream/beige to match reference */
+  filter: invert(1) sepia(0.2) saturate(0.7) brightness(0.93);
+}
+
+/* City Pins */
+.find-map-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.find-pin-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-pink);
+  border: 2.5px solid #FFFFFF;
+  box-shadow: 0 3px 8px rgba(228, 61, 91, 0.45);
+}
+
+/* Handwritten Overlay */
+.find-script-overlay {
+  position: absolute;
+  bottom: 12%;
+  right: 2%;
+  font-family: 'Konichiwa', cursive, sans-serif;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  line-height: 1.15;
+  color: #7A6354;
+  opacity: 0.85;
+  pointer-events: none;
+  transform: rotate(-4deg);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .find-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .find-content {
+    align-items: center;
+    text-align: center;
+  }
+  .find-search-box {
+    max-width: 100%;
+  }
+  .find-cities-row {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .find-section {
+    padding: 2.5rem 0;
+  }
+  .find-title {
+    font-size: clamp(2.2rem, 9vw, 3.2rem);
+  }
+  .find-script-overlay {
+    font-size: 1.2rem;
+  }
+}

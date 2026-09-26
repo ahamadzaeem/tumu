@@ -1,0 +1,192 @@
+.flavors-section {
+  overflow: hidden;
+  position: relative;
+  padding: 8rem 0;
+  background-image: url('/petals sakura bg less.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.flavors-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.flavors-eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-pink);
+  margin-bottom: 0.5rem;
+}
+
+.flavors-header h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.flavors-nav { display: flex; gap: 0.75rem; }
+
+.flavor-nav-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--color-black);
+}
+.flavor-nav-btn:hover {
+  border-color: var(--color-blue);
+  color: var(--color-blue);
+}
+.flavor-nav-btn--filled {
+  background: var(--color-blue);
+  border-color: var(--color-blue);
+  color: white;
+}
+.flavor-nav-btn--filled:hover {
+  background: #3172b6;
+  border-color: #3172b6;
+  color: white;
+}
+
+/* ── Scroll track ── */
+.flavors-scroll-container {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 1rem var(--spacing-md) 5rem;
+  cursor: grab;
+  position: relative;
+  z-index: 1;
+}
+.flavors-scroll-container:active { cursor: grabbing; }
+.flavors-scroll-container::-webkit-scrollbar { display: none; }
+
+.flavors-track {
+  display: inline-flex;
+  gap: 2rem;
+  align-items: stretch;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Organic Pod Layout ── */
+.flavor-pod {
+  width: 280px;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem 1rem;
+  cursor: pointer;
+}
+
+/* Organic blob background */
+.flavor-pod-bg {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border-radius: 45% 55% 70% 35% / 40% 45% 60% 50%;
+  z-index: 1;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.6s ease, border-radius 0.6s ease;
+}
+
+.flavor-pod:hover .flavor-pod-bg {
+  transform: translate(-50%, -50%) scale(1.08) rotate(8deg);
+  border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+}
+
+/* Floating product image */
+.flavor-pod-img {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  border-radius: 16px;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
+  margin-bottom: 2rem;
+}
+
+/* Text Overlays */
+.flavor-pod-content {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.flavor-pod-top {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flavor-id {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.flavor-kanji {
+  font-size: 2rem;
+  opacity: 0.2;
+  font-weight: 900;
+}
+
+.flavor-pod-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  pointer-events: auto;
+}
+
+.flavor-name {
+  font-size: 1.6rem;
+  line-height: 1.1;
+  white-space: pre-line;
+  margin-bottom: 0.5rem;
+}
+
+.flavor-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: gap 0.3s;
+}
+
+.flavor-cta:hover { gap: 0.8rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flavor-card { width: 200px; }
+  .flavor-emoji { font-size: 2.8rem; }
+}

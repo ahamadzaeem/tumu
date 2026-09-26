@@ -1,0 +1,241 @@
+/* ── Making of TUMU / Find Outlets — Full Bleed Banner ── */
+.making-section {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 520px;
+  max-height: 840px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* Full bleed background image */
+.making-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  display: block;
+  z-index: 0;
+}
+
+/* Left gradient overlay for text readability */
+.making-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(247, 241, 233, 0.96) 0%,
+    rgba(247, 241, 233, 0.82) 42%,
+    rgba(247, 241, 233, 0.20) 68%,
+    rgba(247, 241, 233, 0.0) 85%
+  );
+}
+
+/* Text overlay on left */
+.making-text-overlay {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 48% 0 6%;
+  width: 100%;
+}
+
+/* Eyebrow badge */
+.making-eyebrow {
+  font-family: var(--font-fancy);
+  font-size: 0.85rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #6D5647;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  display: block;
+}
+
+/* Main heading — Multi-color brand titles */
+.making-title {
+  font-size: clamp(2.3rem, 4.3vw, 4.4rem);
+  line-height: 1.05;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.5px;
+}
+
+/* Body copy */
+.making-desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.85rem, 1.15vw, 1.08rem);
+  line-height: 1.5;
+  color: #3A2312;
+  margin-bottom: 1.3rem;
+  font-weight: 600;
+  max-width: 480px;
+}
+
+/* ── Interactive Outlet Search Box ── */
+.outlet-search-box {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 9999px;
+  padding: 5px 6px 5px 20px;
+  border: 1.5px solid rgba(56, 151, 211, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 440px;
+  margin-bottom: 1.2rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.outlet-search-box:focus-within {
+  border-color: var(--color-pink);
+  box-shadow: 0 12px 35px rgba(228, 61, 91, 0.15);
+}
+
+.outlet-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 0.92rem;
+  background: transparent;
+  color: #111111;
+  font-weight: 600;
+}
+
+.outlet-search-input::placeholder {
+  color: #8C7B6E;
+  font-weight: 500;
+}
+
+.outlet-search-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--color-pink);
+  color: #FFFFFF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(228, 61, 91, 0.35);
+}
+
+.outlet-search-btn:hover {
+  background: var(--color-pink-dark);
+  transform: scale(1.05);
+}
+
+/* ── City Filter Pills ── */
+.outlet-city-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 480px;
+}
+
+.outlet-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #3A2312;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.outlet-pill.is-active {
+  background: var(--color-pink) !important;
+  color: #FFFFFF !important;
+  border-color: var(--color-pink) !important;
+  box-shadow: 0 4px 15px rgba(228, 61, 91, 0.35);
+}
+
+.outlet-pill:hover:not(.is-active) {
+  background: #FFFFFF;
+  border-color: var(--color-blue);
+  color: var(--color-blue);
+  transform: translateY(-1px);
+}
+
+.pill-pin {
+  transition: transform 0.2s ease;
+}
+
+.outlet-pill:hover .pill-pin {
+  transform: translateY(-1px);
+}
+
+/* ── CTA Link Button ── */
+.outlet-cta {
+  box-shadow: 0 6px 20px rgba(228, 61, 91, 0.3);
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .making-section {
+    aspect-ratio: 16 / 10;
+    min-height: 520px;
+  }
+  .making-text-overlay {
+    padding: 0 38% 0 5%;
+  }
+}
+
+@media (max-width: 640px) {
+  .making-section {
+    aspect-ratio: auto;
+    min-height: 520px;
+  }
+  .making-bg-img {
+    object-position: 62% center;
+    transform: scale(1.2);
+    transform-origin: center center;
+  }
+  .making-gradient-overlay {
+    background: linear-gradient(
+      to right,
+      rgba(247, 241, 233, 0.96) 0%,
+      rgba(247, 241, 233, 0.82) 48%,
+      rgba(247, 241, 233, 0.25) 75%,
+      rgba(247, 241, 233, 0.0) 100%
+    );
+  }
+  .making-text-overlay {
+    padding: 2.2rem 1.4rem;
+    width: 90%;
+    max-width: 420px;
+    align-items: flex-start;
+  }
+  .making-title {
+    font-size: clamp(2rem, 7.5vw, 2.7rem);
+    line-height: 1.1;
+    margin-bottom: 0.8rem;
+    filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.95));
+  }
+  .making-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #3A2312;
+    text-shadow: 0 1px 6px rgba(255, 255, 255, 0.95);
+  }
+}
+

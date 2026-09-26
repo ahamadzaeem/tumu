@@ -1,0 +1,108 @@
+/* ── Section: Serendipity Inside ── */
+.sensory-section {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: #000;  /* fallback */
+}
+
+/* Full bleed background image */
+.sensory-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  z-index: 0;
+}
+
+/* Text overlay — floats directly over image, no background box */
+.sensory-text-overlay {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  width: 42%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5% 0 4%;
+  background: transparent;
+}
+
+/* Heading */
+.sensory-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 1.2rem;
+  line-height: 0.95;
+  letter-spacing: -0.5px;
+}
+
+.sensory-word-dark {
+  font-size: clamp(2.2rem, 4.5vw, 5rem);
+  color: #2B1810;
+  font-weight: 900;
+  line-height: 0.95;
+  display: block;
+  text-shadow: 0 2px 20px rgba(255,255,255,0.6);
+}
+
+.sensory-word-pink {
+  font-size: clamp(2.2rem, 4.5vw, 5rem);
+  color: var(--color-pink);
+  font-weight: 900;
+  display: block;
+  line-height: 0.95;
+  text-shadow: 0 2px 20px rgba(255,255,255,0.5);
+}
+
+.sensory-dot {
+  font-size: 0.5em;
+  margin-left: 0.15rem;
+  color: var(--color-pink);
+  vertical-align: super;
+  display: inline-block;
+}
+
+/* Description */
+.sensory-description {
+  font-size: clamp(0.82rem, 1.1vw, 1.05rem);
+  line-height: 1.55;
+  color: #2B1810;
+  font-weight: 600;
+  max-width: 360px;
+  text-shadow: 0 1px 12px rgba(255,255,255,0.6);
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .sensory-section {
+    aspect-ratio: 16 / 9;
+  }
+  .sensory-text-overlay {
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .sensory-section {
+    aspect-ratio: auto;
+    min-height: 75vw;
+  }
+  .sensory-word-dark,
+  .sensory-word-pink {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+  }
+  .sensory-description {
+    font-size: 0.9rem;
+  }
+}
